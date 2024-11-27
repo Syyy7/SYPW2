@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    color: #234;
+}
+
+body{
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+    /*background:url('../img/back.jpeg');background-size: cover;background-repeat: no-repeat;*/
+}
+
+main{
+    width: 80%;
+    height: 80vh;
+
+    margin: 20vh auto;
+
+    background: rgba(253, 253, 253, 0.75);
+    /*background: #000;*/
+    backdrop-filter: blur(15px);
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 100;
+    position: relative;
+}
+
+.headImg{
+    width: 22vh;
+    height: 22vh;
+    /*border:1px solid red;*/
+
+    border-radius: 50%;
+
+    margin: -11vh 0 0 5vw;
+
+    overflow: hidden;
+}
+
+.headImg>img{
+    width: 100%;
+    height: 100%;
+}
+
+#name{
+    border: 1px solid #234;
+    position: absolute;
+    width: auto;
+    height: auto;
+    margin: -5vw 0 0 17vw;
+    font-size: 3.25vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#content {
+    /*border: 1px solid #234;*/
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    padding-left: 5vw;
+    padding-right: 5vw;
+
+    /*height: 100%;*/
+}
+
+#content>header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-bottom: 1px solid rgba(34, 51, 68, 0.4);
+}
+
+#content>header>button{
+    /*margin-left: 20px;*/
+    width: 10%;
+
+    background: none;
+    border-left: 1px solid rgba(34, 51, 68, 0.4);
+    /*border-right: 1px solid rgba(34, 51, 68, 0.5);*/
+
+    color: rgba(34, 51, 68, 0.4);
+
+    cursor: pointer;
+}
+
+#content>header>button:first-child{
+    margin-left: 0;
+    border-left: 0;
+
+    color: #234;
+}
+#content>header>p{
+    position: absolute;
+}
+
+#content>.item{
+    /*border: 1px solid rgba(34, 51, 68, 1);*/
+    margin-top: 20px;
+
+    display: none;
+    /*flex-direction: column;*/
+    /*flex-wrap: wrap;*/
+    /*padding-left: 2vw;*/
+}
+
+#content>.item>div{
+    animation: top-in 1200ms forwards paused;
+    /*animation-name: top-out;*/
+    animation-delay: 0ms;
+    /*animation-play-state: running;*/
+
+    opacity: 0%;
+    margin-top: 40px;
+}
+
+#home{
+    height: 50vh;
+    flex-direction: row;
+    justify-content: space-between;
+
+    /*border: 1px solid #234;*/
+    overflow: inherit;
+}
+#home>div{
+    width: 30%;
+    height: 100%;
+
+    /*border: 1px solid black;*/
+
+    animation: top-in 1200ms forwards paused;
+    animation-delay: 0ms;
+    /*animation-play-state: running;*/
+
+    opacity: 0%;
+    margin-top: 40px;
+}

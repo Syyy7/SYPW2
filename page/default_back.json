@@ -1,0 +1,14 @@
+{
+  "background": {
+    "url": "img/back.jpeg",
+    "css": "background:url('img/back.jpeg');background-size: cover;background-repeat: no-repeat;"
+  },
+
+  "title": {
+    "text": "Syyy的个人网站"
+  },
+
+  "icon": {
+    "url": "icon/sy.ico"
+  }
+}

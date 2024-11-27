@@ -1,0 +1,137 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+main{
+    width: 80%;
+    height: 100%;
+    /*border: 1px solid #234;*/
+    background: rgba(253, 253, 253, 0.75);
+    backdrop-filter: blur(15px);
+
+    display: flex;
+    flex-direction: column;
+}
+
+main>h1{
+    border-bottom: 1px solid #234;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.box{
+    /*border: 1px solid #234;*/
+    margin: 30px 60px 0px 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.box>*{
+    margin-left: 40px;
+}
+
+main>.box>h2{
+    padding-bottom: 10px;
+    margin-left: 0;
+    width: 100%;
+    /*border-bottom: 1px solid #234;*/
+}
+main>.box>form{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*justify-content: center;*/
+    align-items: center;
+}
+
+
+main>.box>form>input{
+    height: 30px;
+    width: 300px;
+    font-size: 1.25rem;
+
+    background: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding-left: 10px;
+
+    border: 1px solid #0059fd;
+    border-radius: 0.25rem;
+    box-shadow: rgba(0, 89, 253, 0.85) 0px 0px 5px;
+
+    animation: forwards 1.4s focus paused;
+    /*animation-play-state: running;*/
+}
+
+main>.box>form>input:focus{
+    outline: none;
+}
+
+.buttonClass1{
+    height: 30px;
+    width: 80px;
+    font-size: 1em;
+
+    background: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #0059fd;
+    border-radius: 0.25rem;
+    /*box-shadow: rgba(0, 89, 253, 0.85) 0px 0px 5px; */
+
+    margin-left: 10px;
+}
+
+#submitTitle{
+    background: none;
+    margin-left: -30px;
+    opacity: 0%;
+    display: none;
+
+    animation: out forwards 1.4s paused;
+}
+
+@keyframes focus {
+    to{
+        box-shadow: rgba(0, 89, 253, 0.85) 0px 0px 10px;
+    }
+}
+
+@keyframes blur {
+    to{
+        box-shadow:rgba(0, 89, 253, 0.85) 0px 0px 5px;
+    }
+}
+
+@keyframes out {
+    to{
+        display: block;
+        opacity: 60%;
+        margin-left: 10px;
+    }
+}
+
+@keyframes break {
+    to{
+        display: none;
+    }
+}

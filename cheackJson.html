@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.7.1.js"></script>
+</head>
+<body>
+<div id="text"></div>
+</body>
+<script>
+    a = $.ajax({
+        url: "../page/default.json",
+        type: "get",
+        dataType: "json",
+        async: false,
+        success: function (data) {
+        },
+        error:function () {
+            console.error('ajax error!')
+        }
+    })
+
+    json = JSON.parse(a.responseText)
+
+    console.log(json)
+</script>
+</html>

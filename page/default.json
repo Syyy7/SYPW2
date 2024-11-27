@@ -1,0 +1,26 @@
+{
+  "background": {
+    "url": "img\/back.jpeg",
+    "css": "background:url('img\/back.jpeg');background-size: cover;background-repeat: no-repeat;"
+  },
+  "title": {
+    "text": "Syyy\u7684\u4e2a\u4eba\u535a\u5ba2"
+  },
+  "icon": {
+    "url": "icon\/sy.ico"
+  },
+  "VFX": {
+    "index": {
+      "path": "js/VFX/snow.js",
+      "name": "snow",
+      "CName":"雪花飘落"
+    },
+    "options": {
+      "snow": {
+        "path": "js/VFX/snow.js",
+        "name": "snow",
+        "CName":"雪花飘落"
+      }
+    }
+  }
+}
