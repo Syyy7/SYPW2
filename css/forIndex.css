@@ -7,8 +7,9 @@
 
 body{
     width: 100vw;
-    height: auto;
+    height: 100vh;
     overflow: hidden;
+    /*border: 1px solid #234;*/
     /*background:url('../img/back.jpeg');background-size: cover;background-repeat: no-repeat;*/
 }
 
@@ -16,7 +17,7 @@ main{
     width: 80%;
     height: 80vh;
 
-    margin: 20vh auto;
+    margin: 20vh auto 0px auto;
 
     background: rgba(253, 253, 253, 0.75);
     /*background: #000;*/
@@ -113,12 +114,15 @@ main{
     /*padding-left: 2vw;*/
 }
 
-#content>.item>div{
+#content>.item>h1{
+    width: 100%;
+}
+
+#content>.item>*{
     animation: top-in 1200ms forwards paused;
     /*animation-name: top-out;*/
     animation-delay: 0ms;
     /*animation-play-state: running;*/
-
     opacity: 0%;
     margin-top: 40px;
 }
@@ -143,4 +147,75 @@ main{
 
     opacity: 0%;
     margin-top: 40px;
+}
+
+#project{
+    /*border: 1px solid #234;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#project>.box{
+    width: 100%;
+    height: auto;
+
+    /*border: 1px solid #234;*/
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    margin: 0px;
+    position: relative;
+}
+#project>.box>div{
+    width: 350px;
+    height: 100px;
+
+    border: 1px solid #234;
+    border-radius: 0.50rem;
+    flex-grow: 1;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    /*padding: 10px;*/
+    padding-left: 10px;
+
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+#project>.box>div>.title{
+    margin-top: 10px;
+}
+#project>.box>div>a{
+    position: absolute;
+    margin-right: 0px;
+    color: white;
+    text-decoration: none;
+    align-self: end;
+    height: 81.7%;
+    width: 200px;
+    background: rgba(83, 165, 255, 0.5);
+    z-index: 1;
+
+    border-bottom-right-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+#project>.box>div>a>*{
+    /*border: 1px solid #234;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1rem;
+    word-spacing: 1.25rem;
+    letter-spacing: 0.25rem;
 }
