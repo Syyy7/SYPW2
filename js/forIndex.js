@@ -8,7 +8,6 @@ const top_in = function (object) {
         time+=600
     })
 }
-
 const top_out = function (object) {
     var time = 0
     object.children().each(function () {
@@ -28,9 +27,38 @@ const switchMain = function (toMian,the) {
 
     switch (toMian) {
         case '#project':
-            $('body').append('<script src="js/forIndexProjects.js"></script>')
+            jQuery.getScript("js/forIndexProjects.js")
     }
 }
+function wait(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+const printStr =async function (event) {
+    var str1="<>\@#$%^&*"
+    var mainStr = $(event).text()
+    $(event).text('').css('border-right','2px solid #234')
+    let str2 = '';
+    for (i = 0; i <= mainStr.length; i++,await wait(150)) {
+        // for (j=0;j<3;j++){
+        //     $(event).append(str1[getRandomInt(0,str1.length-1)])
+        //     str2=$(event).text()
+        //     await wait(50)
+        //     $(event).text(str2.slice(0,-1))
+        //     // console.log(str1[getRandomInt(0,str1.length-1)])
+        // }
+        $(event).append(mainStr.slice(i, i + 1))
+        // console.log(mainStr.slice(i, i + 1))
+    }
 
+}
+async function printText() {
+    $("#home>.text").children().each(async function () {
+        printStr(this)
 
+    })
+}
+printText()
 top_in($("#home"))

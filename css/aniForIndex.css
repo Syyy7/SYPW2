@@ -20,3 +20,13 @@
         display: none;
     }
 }
+
+@keyframes printStr {
+    from{
+        width: 0ch;
+    }
+
+    to{
+        width: 3ch;
+    }
+}
