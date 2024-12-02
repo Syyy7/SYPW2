@@ -25,6 +25,11 @@ const switchMain = function (toMian,the) {
     top_in($(String(toMian)))
     $('#content>header>button').css('color','rgba(34, 51, 68, 0.4)')
     $(the).css('color','rgba(34, 51, 68, 1)')
+
+    switch (toMian) {
+        case '#project':
+            $('body').append('<script src="js/forIndexProjects.js"></script>')
+    }
 }
 
 
