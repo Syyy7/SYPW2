@@ -194,6 +194,12 @@ main{
 }
 #project>.box>div>.left{
     margin-top: 10px;
+    height: 100%;
+    /*border: 1px solid #234;*/
+}
+#project>.box>div>.left>.date{
+    margin-top: 10px;
+    opacity: 50%;
 }
 #project>.box>div>.link{
     height: 100%;

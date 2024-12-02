@@ -17,6 +17,7 @@ for (const [key, value] of Object.entries(projects)) {
         '                            <div class="left">\n' +
         '                                <h2 class="title">'+value.title+'</h2>\n' +
         '                                <p class="ps">'+value.ps+'</p>\n' +
+                                        '<p class="date">'+ value.date+'</p>\n'+
         '                            </div>\n' +
         '                            <a href="'+value.link+'" class="link"  target="_blank">前往项目</a>\n' +
         '                        </div>')
