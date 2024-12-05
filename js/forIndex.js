@@ -39,8 +39,10 @@ function getRandomInt(min, max) {
 const printStr =async function (event) {
     var str1="<>\@#$%^&*"
     var mainStr = $(event).text()
-    $(event).text('').css('border-right','2px solid #234')
     let str2 = '';
+    console.log($(event).css('width'))
+    $(event).text('').css('border-right','2px solid #234')
+
     for (i = 0; i <= mainStr.length; i++,await wait(150)) {
         // for (j=0;j<3;j++){
         //     $(event).append(str1[getRandomInt(0,str1.length-1)])
@@ -51,14 +53,17 @@ const printStr =async function (event) {
         // }
         $(event).append(mainStr.slice(i, i + 1))
         // console.log(mainStr.slice(i, i + 1))
+
+        if (i === mainStr.length){$(event).css('border-right','0px')}
     }
 
 }
 async function printText() {
     $("#home>.text").children().each(async function () {
         printStr(this)
-
     })
+    //！！！！！！！！没完成呢 有些细节需要优化
 }
 printText()
+
 top_in($("#home"))
