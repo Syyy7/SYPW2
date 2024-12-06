@@ -27,7 +27,9 @@ const switchMain = function (toMian,the) {
 
     switch (toMian) {
         case '#project':
-            jQuery.getScript("js/forIndexProjects.js")
+            jQuery.getScript("js/forIndexProjects.js");
+        case '#word':
+            jQuery.getScript("js/forIndexWord.js");
     }
 }
 function wait(ms) {
@@ -40,7 +42,7 @@ const printStr =async function (event) {
     var str1="<>\@#$%^&*"
     var mainStr = $(event).text()
     let str2 = '';
-    console.log($(event).css('width'))
+    // console.log($(event).css('width'))
     $(event).text('').css('border-right','2px solid #234')
 
     for (i = 0; i <= mainStr.length; i++,await wait(150)) {
@@ -64,6 +66,12 @@ async function printText() {
     })
     //！！！！！！！！没完成呢 有些细节需要优化
 }
+
+function nameMargin() {
+    $('name').css('margin-left',$('#headImg').css('width'))
+}
+
+nameMargin()
 printText()
 
 top_in($("#home"))
